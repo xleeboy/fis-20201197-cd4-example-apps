@@ -15,7 +15,8 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: flask    spec:
+        app: flask
+    spec:
       containers:
       - image: gasbugs/flask-example
         name: flask-example
