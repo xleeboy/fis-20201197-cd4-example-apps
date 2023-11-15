@@ -16,7 +16,7 @@ spec:
       creationTimestamp: null
       labels:
         app: flask
-  spec:
-    containers:
-    - name: nginx
-      image: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
