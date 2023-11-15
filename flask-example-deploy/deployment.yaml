@@ -6,7 +6,7 @@ metadata:
     app: flask
   name: flask
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: flask
@@ -18,12 +18,5 @@ spec:
         app: flask
     spec:
       containers:
-      - image: ip-10-101-1-161.ap-northeast-2.compute.internal/admin/nginx
+      - image: nginx
         name: flask-example
-        imagePullPolicy: Always
-      imagePullSecrets:
-      - name: harbor-registry-secret
-      tls:
-      - hosts:
-        - ip-10-101-1-161.ap-northeast-2.compute.interna
-        secretName: registry-tls-secret
