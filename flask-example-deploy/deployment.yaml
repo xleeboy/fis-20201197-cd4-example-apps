@@ -21,3 +21,7 @@ spec:
       - name: nginx
         image: ip-10-101-1-161.ap-northeast-2.compute.internal/admin/nginx
         imagePullPolicy: Always
+  tls:
+  - hosts:
+    - ip-10-101-1-161.ap-northeast-2.compute.internal
+    secretName: ca-secret
