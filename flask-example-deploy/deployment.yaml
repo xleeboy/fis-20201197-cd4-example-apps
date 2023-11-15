@@ -22,4 +22,8 @@ spec:
         name: flask-example
         imagePullPolicy: Always
       imagePullSecrets:
-      - name: regcred 
+      - name: harbor-registry-secret
+      tls:
+      - hosts:
+        - ip-10-101-1-161.ap-northeast-2.compute.internal
+        secretName: harbor-tls
