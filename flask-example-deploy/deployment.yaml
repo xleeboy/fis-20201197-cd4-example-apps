@@ -23,3 +23,8 @@ spec:
         imagePullPolicy: Always
       imagePullSecrets:
       - name: registry-secret
+        tls:
+        - hosts:
+          - ip-10-101-1-161.ap-northeast-2.compute.internal
+          secretName: registry-tls-secret
+        - secretName: ca-secret
