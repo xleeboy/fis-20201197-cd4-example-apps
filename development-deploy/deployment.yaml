@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: ip-10-101-1-161.ap-northeast-2.compute.internal/fis-20201197-cd4-project/nginx:60
+        image: ip-10-101-1-161.ap-northeast-2.compute.internal/fis-20201197-cd4-project/nginx:61
         imagePullPolicy: Always
       imagePullSecrets:
       - name: registry-secret 
