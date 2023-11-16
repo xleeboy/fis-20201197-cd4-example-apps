@@ -6,8 +6,10 @@ metadata:
     app: flask
   name: flask
 spec:
+  type: NodePort
   ports:
-  - port: 5000
+  - port: 5000  # 외부에서 접속할 때 사용할 포트를 여기에 지정합니다.
+    nodePort: 30201  # 노드의 포트를 여기에 지정합니다.
     protocol: TCP
     targetPort: 5000
   selector:
