@@ -1,1 +1,25 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nginx
+  name: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: ip-10-101-1-161.ap-northeast-2.compute.internal/fis-20201197-cd4-project/nginx:53
+        imagePullPolicy: Always
+      imagePullSecrets:
+      - name: registry-secret 
