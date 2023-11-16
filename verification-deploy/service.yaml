@@ -6,22 +6,9 @@ metadata:
     app: nginx
   name: nginx
 spec:
-  clusterIP: 10.110.90.124
-  clusterIPs:
-  - 10.110.90.124
-  externalTrafficPolicy: Cluster
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
-  - nodePort: 30201
-    port: 80
+  - port: 80
     protocol: TCP
     targetPort: 80
   selector:
     app: nginx
-  sessionAffinity: None
-  type: NodePort
-status:
-  loadBalancer: {}
